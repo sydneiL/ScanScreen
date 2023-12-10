@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Globe Tags*/
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgb(116, 49, 222);
+}
+span{
+    font-size: .9rem;
+    color:bisque;
+}
+h6{
+    font-size: 1.1rem;
+    color:indigo;
+}
+/*Navigation Bar*/
+
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgb(5, 5, 5);
+}
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color:rgb(33, 10, 47);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+nav .navigation ul li a:hover{
+    color:chocolate;
+
+}
+
+/*Home*/
+
+#home{
+    background-image: linear-gradient(rgba(19, 6, 161, 0.3),rgba(6,17,46,0.7)),url("img/abstract\ download.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:40px;
+   
+}
+#home h2{
+    color:azure;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+#home p{
+    width: 50%;
+    color:antiquewhite;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+#home .btn{
+    margin-top: 30px;
+}
+#home a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: blanchedalmond;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#home a.orange{
+   color: beige;
+   background-color: rgb(116, 49, 222);
+   transition: 0.3s ease;
+}
+#home a.orange:hover{
+    color: rgb(116, 49, 222);
+    background-color: beige;
+}
+#home a.gold{
+    color: beige;
+    background-color: rgb(15, 42, 195);
+    transition: 0.3s ease;
+}
+ #home a.gold:hover{
+     color: rgb(15, 42, 195);
+     background-color: beige;
+ }
+ /*Features*/
+ 
+ #features{
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+ }
+ #features .fea-base{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+   
+ }
+
+ #features .fea-box{
+    background-color: white;
+    text-align: start;
+ }
+ #features .fea-box i{
+    font-size: 2.3rem;
+    color:rgba(44,44,80);
+   
+ }
+ #features.fea-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:(44,44,80);
+    padding:13px 0 7px 0;
+ }
+
+ #features.fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color:(44,44,80);
+}
+/*scanscreen*/
+
+#scanscreen{
+    background-image: linear-gradient(rgba(19, 6, 161, 0.3),rgba(6,17,46,0.7)),url("img/mobile\ application.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:40px;
+}
+#scanscreen h2{
+
+    width: 50%;
+    color:azure;
+    font-size: 0.9rem;
+    line-height: 25px;
+    text-align: center;
+    font-size: 600;
+}
+#scanscreen p{
+
+    width: 50%;
+    color:rgb(234, 172, 29);
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+#scanscreen .btn{
+    margin-top: 30px;
+}
+#scanscreen a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: blanchedalmond;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#scanscreen a.orange{
+   color: beige;
+   background-color: rgb(116, 49, 222);
+   transition: 0.3s ease;
+}
+#scanscreen a.orange:hover{
+    color: rgb(116, 49, 222);
+    background-color: beige;
+}
+#scanscreen a.gold{
+    color: beige;
+    background-color: rgb(15, 42, 195);
+    transition: 0.3s ease;
+}
+#scanscreen a.gold:hover{
+     color: rgb(15, 42, 195);
+     background-color: beige;
+ }
+/*Contact*/
+
+#contact{
+
+
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+      .container{
+        max-width: 800px;
+        background: rgb(154, 15, 235);
+        width: 800px;
+        padding: 25px 40px 10px 40px;
+        box-shadow: 0px 0px 10px #eae8e8;
+}
+.container .text{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+        background: -webkit-linear-gradient(right, #ed440c, #9f01ea, #56d8e4, #9f01ea);
+        
+        
+}
+.container form{
+        padding: 30px 0 0 0;
+        
+}
+.container form .form-row{
+        display: flex;
+        margin: 32px 0;
+}
+form .form-row .input-data{
+        width: 100%;
+        height: 40px;
+        margin: 0 20px;
+        position: relative;
+}
+ form .form-row .textarea{
+        height: 70px;
+}
+.input-data input,
+.textarea textarea{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-size: 17px;
+        border-bottom: 2px solid rgba(232, 137, 14, 0.888);
+}
+      .input-data input:focus ~ label, .textarea textarea:focus ~ label,
+      .input-data input:valid ~ label, .textarea textarea:valid ~ label{
+        transform: translateY(-20px);
+        font-size: 14px;
+        color: #3498db;
+      }
+      .textarea textarea{
+        resize: none;
+        padding-top: 10px;
+      }
+      .input-data label{
+        position: absolute;
+        pointer-events: none;
+        bottom: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+      .textarea label{
+        width: 100%;
+        bottom: 40px;
+        background: #fff;
+      }
+      .input-data .underline{
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+      }
+      .input-data .underline:before{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: #3498db;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+      }
+      .input-data input:focus ~ .underline:before,
+      .input-data input:valid ~ .underline:before,
+      .textarea textarea:focus ~ .underline:before,
+      .textarea textarea:valid ~ .underline:before{
+        transform: scale(1);
+      }
+      .submit-btn .input-data{
+        overflow: hidden;
+        height: 45px!important;
+        width: 25%!important;
+      }
+      .submit-btn .input-data .inner{
+        height: 100%;
+        width: 300%;
+        position: absolute;
+        left: -100%;
+        background: -webkit-linear-gradient(right, #481cd7, #ffe605, #0eb9db, #9f01ea);
+        transition: all 0.4s;
+      }
+      .submit-btn .input-data:hover .inner{
+        left: 0;
+      }
+      .submit-btn .input-data input{
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+      }
+      @media (max-width: 700px) {
+        .container .text{
+          font-size: 30px;
+        }
+        .container form{
+          padding: 10px 0 0 0;
+        }
+        .container form .form-row{
+          display: block;
+        }
+        form .form-row .input-data{
+          margin: 35px 0!important;
+        }
+        .submit-btn .input-data{
+          width: 40%!important;
+    }
+}
+/*Objectives*/
+
+#objectives{
+    background-image: url('img/mobile\ application.jpeg');
+}
+#objectives h2{
+    color:azure;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+#objectives p{
+    width: 50%;
+    color:antiquewhite;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+#objectives.btn{
+    margin-top: 30px;
+}
+#sip h2{
+    color:azure;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+#about h2{
+    color:azure;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #7300ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+audio {
+    width: 100%;
+    margin: 20px 0;
+}
+/*Translations*/
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #5500ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+audio {
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+

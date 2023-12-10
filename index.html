@@ -1,0 +1,105 @@
+<!-- Declare the document type and specify that this is an HTML5 document -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Start the head section of the page which contains meta-information and other headers -->
+<head>
+    <!-- Specify the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Make the webpage responsive on all devices by setting the viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the page that appears on the browser tab -->
+    <title>Translation</title>
+    
+    <!-- Embed CSS styles directly into the HTML document -->
+    <style>
+        /* Set default styling for the body */
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px;
+        }
+
+        /* Styling for the header section */
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #380cd7;
+            color: white;
+        }
+
+        /* Styling for the content section */
+        .content {
+            padding: 20px;
+        }
+
+        /* Styling for individual lessons */
+        .lesson {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<!-- Start the body of the page which contains the content of the page -->
+<body>
+
+    <!-- Header section containing the title and description -->
+    <div class="header">
+        <!-- Main title of the website -->
+        <h1>Language Learning for All</h1>
+        <!-- Short description for the website -->
+        <p>Making language learning accessible and fun for everyone!</p>
+    </div>
+
+    <!-- Main content section -->
+    <div class="content">
+        <!-- Section for lessons -->
+        <h2>Language Lessons</h2>
+        
+        <!-- Example lesson for basic words -->
+        <div class="lesson">
+            <h3>Basic Words</h3>
+            
+            <!-- Audio player allowing students to listen to pronunciations -->
+            <audio controls>
+                <!-- Source of the audio file for the lesson (Replace with actual path) -->
+                <source src="path-to-audio-file-for-basic-words.mp3" type="audio/mpeg">
+                <!-- Fallback message if the browser doesn't support the audio element -->
+                Your browser does not support the audio element.
+            </audio>
+            
+            <!-- Short description for this lesson -->
+            <p>Example words: Apple, Banana, Cat. (Add audio for these words)</p>
+        </div>
+
+        <!-- Section for exams -->
+        <h2>Exams</h2>
+        
+        <!-- Dropdown to select a subject for the exam -->
+        <p>Choose a subject you learned:</p>
+        <select id="examSubject">
+            <option value="basic-words">Basic Words</option>
+        </select>
+        
+        <!-- Button to start the exam -->
+        <button onclick="startExam()">Start Exam</button>
+    </div>
+
+    <!-- Embed JavaScript directly into the HTML document -->
+    <script>
+        /* Function to initiate the exam based on the selected subject */
+        function startExam() {
+            // Get the value of the currently selected subject in the dropdown
+            let subject = document.getElementById("examSubject").value;
+            
+            // Check if the subject is "basic-words" and initiate that exam
+            if (subject === "basic-words") {
+                alert("Starting exam for Basic Words!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

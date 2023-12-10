@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translations</title>
+</head>
+<body>
+    <h1>Learn Your Favorite Languages</h1>
+
+    <p>Select a language to hear the audio clip:</p>
+    
+    <label for="language-select">Choose a Language:</label>
+    <select id="language-select">
+        <option value="english">English</option>
+        <option value="french">French</option>
+        <option value="mandarin">Mandarin</option>
+        <option value="hungarian">Hungarian</option>
+        <option value="malay">Malay</option>
+        <option value="czech">Czech</option>
+        <option value="arabic">Arabic</option>
+        <option value="japanese">Japanese</option>
+        <option value="korean">Korean</option>
+        <option value="italian">Italian</option>
+        <option value="romanian">Romanian</option>
+        <option value="marathi">Marathi</option>
+  </select>
+
+    <button id="play-audio">Play Audio</button>
+    <audio id="audio" controls autoplay></audio>
+    
+        <source id="english-audio" src="audio/English Translation.mp3" type="audio/mpeg">
+        <source id="french-audio" src="audio/French Translation.mp3" type="audio/mpeg">
+        <source id="mandarin-audio" src="audio/Mandarin Translation.mp3" type="audio/mpeg">
+        <source id="malay-audio" src="audio/Malay Translation.mp3" type="audio/mpeg">
+        <source id="japanese-audio" src="audio/Japanese Translation.mp3" type="audio/mpeg">
+        <source id="romanian-audio" src="audio/Romanian Translation.mp3" type="audio/mpeg">
+        <source id="marathi-audio" src="audio/Marathi Translation.mp3" type="audio/mpeg">
+        <source id="korean-audio" src="audio/Korean Translation.mp3" type="audio/mpeg">
+        <source id="italian-audio" src="audio/Italian Translation.mp3" type="audio/mpeg">
+        <source id="hungarian-audio" src="audio/Hungarian Translation.mp3" type="audio/mpeg">
+        <source id="czech-audio" src="audio/Czech Translation.mp3" type="audio/mpeg">
+        <source id="arabic-audio" src="audio/Arabic Translation.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>Would you like to learn this language?</p>
+    
+    
+    <label for="learn-language-english">English</label>
+    <input type="checkbox" id="learn-language-english" value="english">
+
+
+    <label for="learn-language-french">French</label>
+    <input type="checkbox" id="learn-language-french" value="french">
+
+    <label for="learn-language-chinese">Chinese</label>
+    <input type="checkbox" id="learn-language-french" value="chinese">
+
+    <label for="learn-language-hungarian">Hungarian</label>
+    <input type="checkbox" id="learn-language-hungarian" value="hungarian">
+
+    <label for="learn-language-malay">Malay</label>
+    <input type="checkbox" id="learn-language-malay" value="malay">
+
+    <label for="learn-language-tagalog">Tagalog</label>
+    <input type="checkbox" id="learn-language-tagalog" value="tagalog">
+
+    <label for="learn-language-korean">Korean</label>
+    <input type="checkbox" id="learn-language-korean" value="korean">
+
+    <label for="learn-language-czech">Czech</label>
+    <input type="checkbox" id="learn-language-czech" value="czech">
+
+    <label for="learn-language-romanian">Romanian</label>
+    <input type="checkbox" id="learn-language-romanian" value="romanian">
+
+    <label for="learn-language-arabic">Arabic</label>
+    <input type="checkbox" id="learn-language-arabic" value="arabic">
+
+    <label for="learn-language-marathi">Marathi</label>
+    <input type="checkbox" id="learn-language-marathi" value="marathi">
+
+    <label for="learn-language-japanese">Japanese</label>
+    <input type="checkbox" id="learn-language-japanese" value="japanese">
+
+    <label for="learn-language-italian">Italian</label>
+    <input type="checkbox" id="learn-language-italian" value="italian">
+    
+    
+    <p>Selected Languages:</p>
+    <ul id="selected-languages">
+    </ul>
+
+    <script>
+        document.getElementById("play-audio").addEventListener("click", function () {
+            var languageSelect = document.getElementById("language-select");
+            var audio = document.getElementById("audio");
+
+            var selectedLanguage = languageSelect.value;
+            var selectedAudio = document.getElementById(selectedLanguage + "-audio");
+
+            audio.src = selectedAudio.src;
+            audio.load();
+            audio.play();
+        });
+
+        document.querySelectorAll("input[type='checkbox']").forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+                var selectedLanguages = document.getElementById("selected-languages");
+                var value = checkbox.value;
+                var label = document.querySelector("label[for='learn-language-" + value + "']").textContent;
+
+                if (checkbox.checked) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = label;
+                    selectedLanguages.appendChild(listItem);
+                } else {
+                    var items = selectedLanguages.getElementsByTagName("li");
+                    for (var i = 0; i < items.length; i++) {
+                        if (items[i].textContent === label) {
+                            items[i].remove();
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

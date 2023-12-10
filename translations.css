@@ -1,0 +1,54 @@
+/* Styling for the header section */
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #380cd7;
+    color: white;
+    
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(145, 145, 235);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: gold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #5500ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+audio {
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+
